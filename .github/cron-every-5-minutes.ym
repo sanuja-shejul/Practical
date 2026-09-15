@@ -1,0 +1,25 @@
+
+
+name: Cron Job
+
+
+on:
+  schedule:
+    - corn: "*/5 * * * *"
+  
+jobs:
+  run-job:
+    runs-on: ubuntu-latest
+    steps:
+      
+      - uses: actions/checkout@v4
+
+      
+      - name: Job started
+        run: echo Corn job started
+
+     
+      - name: Display date and time
+        run: date
+      - name: Completion Message
+        run: echo Corn job completed successfully
