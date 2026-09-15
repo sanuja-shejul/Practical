@@ -1,0 +1,25 @@
+
+name: Daily Cron Job - 8 AM
+
+
+on:
+  schedule:
+    - cron: "30 2 * * *"
+  
+jobs:
+  daily-job:   
+    runs-on: ubuntu-latest
+
+   
+    steps:
+      
+      - uses: actions/checkout@v4
+
+    
+      - name: Job started
+        run: echo Daily 8 AM job started
+      - name: Display date and time
+        run:  date
+      - name: Completion Message
+        run: echo Daily job completed
+          
