@@ -1,0 +1,41 @@
+
+
+name: Trigger Workflow
+
+
+on:
+  
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+  
+  workflow_dispatch:
+
+
+jobs:
+  
+  build:
+    
+    runs-on: ubuntu-latest
+
+   
+    steps:
+     
+      - uses: actions/checkout@v4
+
+     
+      - name: Print Success Message
+        run: echo Code push sucessfully
+      - name: Display current date and time
+        run: Date
+      - name: Display current working directory
+        run: pwd
+        
+
+      
+      - name: Run a multi-line script
+        run: |
+          echo Add other actions to build,
+          echo test, and deploy your project.
