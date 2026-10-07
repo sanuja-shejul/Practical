@@ -1,0 +1,19 @@
+name: Daily Cron Job - 8 AM
+
+on:
+  schedule:
+    - cron: "30 2 * * *"
+
+jobs:
+  daily-job:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Job started
+        run: echo "Daily 8 AM job started!"
+
+      - name: Display date and time
+        run: date
+
+      - name: Completion message
+        run: echo "Daily job completed successfully!"
